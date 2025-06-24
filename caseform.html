@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customer Complaint Form</title>
+  <style>
+    body {
+      background-color:#82A0C4;
+      font-family: 'Segoe UI';
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 60px auto;
+      background-color:#fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container img {
+      width: 130px;
+      display: block;
+      margin: 0 auto 25px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #0070d2;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color:#062340 ;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DWU00000PyEkr" method="POST">
+
+    <div class="form-container">
+
+      <img src="https://tool-advisor.fr/wp-content/uploads/2022/08/Salesforce-logo-1.png" alt="Salesforce Logo" style="width: 150px; display: block; margin: 0 auto 20px;">
+
+  <h2>Customer Complaint Form</h2>
+
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+  <input type="hidden" name="orgid" value="00DWU00000PyEkr">
+  <input type="hidden" name="retURL" value="https://subseltechsolution-5d-dev-ed--c.develop.vf.force.com/apex/thank">
+
+      <label for="name">Name </label>
+      <input id="name" name="name" type="text" maxlength="80" required>
+
+      <label for="email">Email </label>
+      <input id="email" name="email" type="email" maxlength="80" required>
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="text" maxlength="40">
+
+      <label for="reason">Complaint Reason</label>
+      <select id="reason" name="reason">
+        <option value="">-- Select a reason --</option>
+        <option value="Installation late">Installation late</option>
+        <option value="Low performance">Low performance</option>
+        <option value="Product damage">Product damage</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other complaint">Other</option>
+      </select>
+
+      <label for="subject">Subject </label>
+      <input id="subject" name="subject" type="text" maxlength="80" required>
+
+      <label for="description">Description </label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+    <a href="own.html">
+<input type="submit" value="Submit">
+
+ </a>
+    </div>
+  </form>
+</body>
+</html>
